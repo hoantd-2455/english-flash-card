@@ -48,46 +48,46 @@ Android project structure (from plan.md):
 
 ### Database Foundation
 
-- [ ] T006 Create Room database class in app/src/main/java/com/englishflashcard/data/local/database/FlashcardDatabase.kt
-- [ ] T007 [P] Create Lesson entity in app/src/main/java/com/englishflashcard/data/local/entity/LessonEntity.kt
-- [ ] T008 [P] Create WordPair entity in app/src/main/java/com/englishflashcard/data/local/entity/WordPairEntity.kt
-- [ ] T009 [P] Create LearningProgress entity in app/src/main/java/com/englishflashcard/data/local/entity/LearningProgressEntity.kt
-- [ ] T010 [P] Create PracticeSession entity in app/src/main/java/com/englishflashcard/data/local/entity/PracticeSessionEntity.kt
-- [ ] T011 [P] Create QuizResult entity in app/src/main/java/com/englishflashcard/data/local/entity/QuizResultEntity.kt
-- [ ] T012 Create LessonDao in app/src/main/java/com/englishflashcard/data/local/database/LessonDao.kt
-- [ ] T013 [P] Create WordPairDao in app/src/main/java/com/englishflashcard/data/local/database/WordPairDao.kt
-- [ ] T014 [P] Create LearningProgressDao in app/src/main/java/com/englishflashcard/data/local/database/LearningProgressDao.kt
-- [ ] T015 [P] Create PracticeSessionDao in app/src/main/java/com/englishflashcard/data/local/database/PracticeSessionDao.kt
-- [ ] T016 [P] Create QuizResultDao in app/src/main/java/com/englishflashcard/data/local/database/QuizResultDao.kt
+- [X] T006 Create Room database class in app/src/main/java/com/englishflashcard/data/local/database/FlashcardDatabase.kt
+- [X] T007 [P] Create Lesson entity in app/src/main/java/com/englishflashcard/data/local/entity/LessonEntity.kt
+- [X] T008 [P] Create WordPair entity in app/src/main/java/com/englishflashcard/data/local/entity/WordPairEntity.kt
+- [X] T009 [P] Create LearningProgress entity in app/src/main/java/com/englishflashcard/data/local/entity/LearningProgressEntity.kt
+- [X] T010 [P] Create PracticeSession entity in app/src/main/java/com/englishflashcard/data/local/entity/PracticeSessionEntity.kt
+- [X] T011 [P] Create QuizResult entity in app/src/main/java/com/englishflashcard/data/local/entity/QuizResultEntity.kt
+- [X] T012 Create LessonDao in app/src/main/java/com/englishflashcard/data/local/database/LessonDao.kt
+- [X] T013 [P] Create WordPairDao in app/src/main/java/com/englishflashcard/data/local/database/WordPairDao.kt
+- [X] T014 [P] Create LearningProgressDao in app/src/main/java/com/englishflashcard/data/local/database/LearningProgressDao.kt
+- [X] T015 [P] Create PracticeSessionDao in app/src/main/java/com/englishflashcard/data/local/database/PracticeSessionDao.kt
+- [X] T016 [P] Create QuizResultDao in app/src/main/java/com/englishflashcard/data/local/database/QuizResultDao.kt
 
 ### DataStore Foundation
 
-- [ ] T017 Create PreferencesDataStore in app/src/main/java/com/englishflashcard/data/local/preferences/PreferencesDataStore.kt
-- [ ] T018 Define UserPreferences data class in app/src/main/java/com/englishflashcard/domain/model/UserPreferences.kt
+- [X] T017 Create PreferencesDataStore in app/src/main/java/com/englishflashcard/data/local/preferences/PreferencesDataStore.kt
+- [X] T018 Define UserPreferences data class in app/src/main/java/com/englishflashcard/domain/model/UserPreferences.kt
 
 ### Domain Models
 
-- [ ] T019 [P] Create Lesson domain model in app/src/main/java/com/englishflashcard/domain/model/Lesson.kt
-- [ ] T020 [P] Create WordPair domain model in app/src/main/java/com/englishflashcard/domain/model/WordPair.kt
-- [ ] T021 [P] Create LearningProgress domain model in app/src/main/java/com/englishflashcard/domain/model/LearningProgress.kt
-- [ ] T022 [P] Create PracticeSession domain model in app/src/main/java/com/englishflashcard/domain/model/PracticeSession.kt
-- [ ] T023 [P] Create QuizResult domain model in app/src/main/java/com/englishflashcard/domain/model/QuizResult.kt
-- [ ] T024 [P] Create enum classes (MasteryLevel, DifficultyRating, TextSize) in app/src/main/java/com/englishflashcard/domain/model/
+- [X] T019 [P] Create Lesson domain model in app/src/main/java/com/englishflashcard/domain/model/Lesson.kt
+- [X] T020 [P] Create WordPair domain model in app/src/main/java/com/englishflashcard/domain/model/WordPair.kt
+- [X] T021 [P] Create LearningProgress domain model in app/src/main/java/com/englishflashcard/domain/model/LearningProgress.kt
+- [X] T022 [P] Create PracticeSession domain model in app/src/main/java/com/englishflashcard/domain/model/PracticeSession.kt
+- [X] T023 [P] Create QuizResult domain model in app/src/main/java/com/englishflashcard/domain/model/QuizResult.kt
+- [X] T024 [P] Create enum classes (MasteryLevel, DifficultyRating, TextSize) in app/src/main/java/com/englishflashcard/domain/model/
 
 ### Repository Implementations
 
-- [ ] T025 Implement LessonRepository in app/src/main/java/com/englishflashcard/data/repository/LessonRepositoryImpl.kt
-- [ ] T026 [P] Implement WordPairRepository in app/src/main/java/com/englishflashcard/data/repository/WordPairRepositoryImpl.kt
-- [ ] T027 [P] Implement LearningProgressRepository in app/src/main/java/com/englishflashcard/data/repository/LearningProgressRepositoryImpl.kt
-- [ ] T028 [P] Implement PracticeSessionRepository in app/src/main/java/com/englishflashcard/data/repository/PracticeSessionRepositoryImpl.kt
-- [ ] T029 [P] Implement QuizResultRepository in app/src/main/java/com/englishflashcard/data/repository/QuizResultRepositoryImpl.kt
-- [ ] T030 [P] Implement PreferencesRepository in app/src/main/java/com/englishflashcard/data/repository/PreferencesRepositoryImpl.kt
+- [X] T025 Implement LessonRepository in app/src/main/java/com/englishflashcard/data/repository/LessonRepositoryImpl.kt
+- [X] T026 [P] Implement WordPairRepository in app/src/main/java/com/englishflashcard/data/repository/WordPairRepositoryImpl.kt
+- [X] T027 [P] Implement LearningProgressRepository in app/src/main/java/com/englishflashcard/data/repository/LearningProgressRepositoryImpl.kt
+- [X] T028 [P] Implement PracticeSessionRepository in app/src/main/java/com/englishflashcard/data/repository/PracticeSessionRepositoryImpl.kt
+- [X] T029 [P] Implement QuizResultRepository in app/src/main/java/com/englishflashcard/data/repository/QuizResultRepositoryImpl.kt
+- [X] T030 [P] Implement PreferencesRepository in app/src/main/java/com/englishflashcard/data/repository/PreferencesRepositoryImpl.kt
 
 ### Navigation Setup
 
-- [ ] T031 Create Navigation graph in app/src/main/java/com/englishflashcard/ui/navigation/NavGraph.kt
-- [ ] T032 Define Screen sealed class for navigation routes in app/src/main/java/com/englishflashcard/ui/navigation/Screen.kt
-- [ ] T033 Setup MainActivity with NavHost in app/src/main/java/com/englishflashcard/MainActivity.kt
+- [X] T031 Create Navigation graph in app/src/main/java/com/englishflashcard/ui/navigation/NavGraph.kt
+- [X] T032 Define Screen sealed class for navigation routes in app/src/main/java/com/englishflashcard/ui/navigation/Screen.kt
+- [X] T033 Setup MainActivity with NavHost in app/src/main/java/com/englishflashcard/MainActivity.kt
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -103,29 +103,29 @@ Android project structure (from plan.md):
 
 #### Lesson List Screen (Empty State + List View)
 
-- [ ] T034 [P] [US1] Create LessonListViewModel in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/LessonListViewModel.kt
-- [ ] T035 [P] [US1] Create LessonListUiState in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/LessonListUiState.kt
-- [ ] T036 [US1] Implement LessonListScreen composable in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/LessonListScreen.kt
-- [ ] T037 [US1] Create LessonCard composable for displaying lesson items in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/LessonCard.kt
-- [ ] T038 [US1] Create EmptyState composable with "Add Lesson" button in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/EmptyState.kt
+- [X] T034 [P] [US1] Create LessonListViewModel in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/LessonListViewModel.kt
+- [X] T035 [P] [US1] Create LessonListUiState in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/LessonListUiState.kt
+- [X] T036 [US1] Implement LessonListScreen composable in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/LessonListScreen.kt
+- [X] T037 [US1] Create LessonCard composable for displaying lesson items in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/LessonCard.kt
+- [X] T038 [US1] Create EmptyState composable with "Add Lesson" button in app/src/main/java/com/englishflashcard/ui/screens/lessonlist/EmptyState.kt
 
 #### Lesson Create/Edit Screen
 
-- [ ] T039 [P] [US1] Create LessonEditViewModel in app/src/main/java/com/englishflashcard/ui/screens/lessonedit/LessonEditViewModel.kt
-- [ ] T040 [P] [US1] Create LessonEditUiState in app/src/main/java/com/englishflashcard/ui/screens/lessonedit/LessonEditUiState.kt
-- [ ] T041 [US1] Implement LessonEditScreen composable in app/src/main/java/com/englishflashcard/ui/screens/lessonedit/LessonEditScreen.kt
-- [ ] T042 [US1] Create WordPairInputCard composable (2 text fields: English + Vietnamese) in app/src/main/java/com/englishflashcard/ui/screens/lessonedit/WordPairInputCard.kt
-- [ ] T043 [US1] Add validation logic in ViewModel (title not empty, at least 1 word pair)
-- [ ] T044 [US1] Implement Save functionality with repository call
+- [X] T039 [P] [US1] Create LessonEditViewModel in app/src/main/java/com/englishflashcard/ui/screens/lessonedit/LessonEditViewModel.kt
+- [X] T040 [P] [US1] Create LessonEditUiState in app/src/main/java/com/englishflashcard/ui/screens/lessonedit/LessonEditUiState.kt
+- [X] T041 [US1] Implement LessonEditScreen composable in app/src/main/java/com/englishflashcard/ui/screens/lessonedit/LessonEditScreen.kt
+- [X] T042 [US1] Create WordPairInputCard composable (2 text fields: English + Vietnamese) in app/src/main/java/com/englishflashcard/ui/screens/lessonedit/WordPairInputCard.kt
+- [X] T043 [US1] Add validation logic in ViewModel (title not empty, at least 1 word pair)
+- [X] T044 [US1] Implement Save functionality with repository call
 
 #### Lesson Detail Screen
 
-- [ ] T045 [P] [US1] Create LessonDetailViewModel in app/src/main/java/com/englishflashcard/ui/screens/lessondetail/LessonDetailViewModel.kt
-- [ ] T046 [P] [US1] Create LessonDetailUiState in app/src/main/java/com/englishflashcard/ui/screens/lessondetail/LessonDetailUiState.kt
-- [ ] T047 [US1] Implement LessonDetailScreen composable in app/src/main/java/com/englishflashcard/ui/screens/lessondetail/LessonDetailScreen.kt
-- [ ] T048 [US1] Display word list with English-Vietnamese pairs
-- [ ] T049 [US1] Add Edit and Delete buttons with confirmation dialog for delete
-- [ ] T050 [US1] Show progress metrics placeholder (will be populated by US3)
+- [X] T045 [P] [US1] Create LessonDetailViewModel in app/src/main/java/com/englishflashcard/ui/screens/lessondetail/LessonDetailViewModel.kt
+- [X] T046 [P] [US1] Create LessonDetailUiState in app/src/main/java/com/englishflashcard/ui/screens/lessondetail/LessonDetailUiState.kt
+- [X] T047 [US1] Implement LessonDetailScreen composable in app/src/main/java/com/englishflashcard/ui/screens/lessondetail/LessonDetailScreen.kt
+- [X] T048 [US1] Display word list with English-Vietnamese pairs
+- [X] T049 [US1] Add Edit and Delete buttons with confirmation dialog for delete
+- [X] T050 [US1] Show progress metrics placeholder (will be populated by US3)
 
 #### Use Cases for Lesson Management
 
@@ -148,14 +148,14 @@ Android project structure (from plan.md):
 
 #### Practice Screen
 
-- [ ] T055 [P] [US2] Create PracticeViewModel in app/src/main/java/com/englishflashcard/ui/screens/practice/PracticeViewModel.kt
-- [ ] T056 [P] [US2] Create PracticeUiState in app/src/main/java/com/englishflashcard/ui/screens/practice/PracticeUiState.kt
-- [ ] T057 [US2] Implement PracticeScreen composable in app/src/main/java/com/englishflashcard/ui/screens/practice/PracticeScreen.kt
-- [ ] T058 [US2] Create FlashcardView composable with tap-to-flip animation in app/src/main/java/com/englishflashcard/ui/components/FlashcardView.kt
-- [ ] T059 [US2] Implement swipe gesture detection (SwipeToDismiss or custom gesture)
-- [ ] T060 [US2] Add visual feedback for swipe direction (left = red, right = green)
-- [ ] T061 [US2] Implement card progression logic (advance to next card on swipe)
-- [ ] T062 [US2] Create SessionSummary composable showing cards reviewed, known, unknown in app/src/main/java/com/englishflashcard/ui/screens/practice/SessionSummary.kt
+- [X] T055 [P] [US2] Create PracticeViewModel in app/src/main/java/com/englishflashcard/ui/screens/practice/PracticeViewModel.kt
+- [X] T056 [P] [US2] Create PracticeUiState in app/src/main/java/com/englishflashcard/ui/screens/practice/PracticeUiState.kt
+- [X] T057 [US2] Implement PracticeScreen composable in app/src/main/java/com/englishflashcard/ui/screens/practice/PracticeScreen.kt
+- [X] T058 [US2] Create FlashcardView composable with tap-to-flip animation in app/src/main/java/com/englishflashcard/ui/components/FlashcardView.kt
+- [X] T059 [US2] Implement swipe gesture detection (SwipeToDismiss or custom gesture)
+- [X] T060 [US2] Add visual feedback for swipe direction (left = red, right = green)
+- [X] T061 [US2] Implement card progression logic (advance to next card on swipe)
+- [X] T062 [US2] Create SessionSummary composable showing cards reviewed, known, unknown in app/src/main/java/com/englishflashcard/ui/screens/practice/SessionSummary.kt
 
 #### Use Cases for Practice
 
@@ -166,8 +166,8 @@ Android project structure (from plan.md):
 
 #### Practice Button in Lesson Detail
 
-- [ ] T067 [US2] Add "Study" button to LessonDetailScreen
-- [ ] T068 [US2] Navigate to PracticeScreen with lessonId parameter
+- [X] T067 [US2] Add "Study" button to LessonDetailScreen
+- [X] T068 [US2] Navigate to PracticeScreen with lessonId parameter
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work - users can create lessons and practice them
 
