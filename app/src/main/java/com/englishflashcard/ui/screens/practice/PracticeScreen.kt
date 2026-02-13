@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
@@ -27,6 +28,7 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -35,9 +37,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.englishflashcard.ui.components.FlashcardView
+import com.englishflashcard.ui.theme.DeepGreen
 
 /**
  * Practice screen with flashcard study mode
@@ -68,7 +73,18 @@ fun PracticeScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(uiState.lessonTitle) },
+                title = {
+                    Text(
+                        uiState.lessonTitle,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 20.sp
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = DeepGreen,
+                    titleContentColor = Color.White,
+                    navigationIconContentColor = Color.White
+                ),
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(
@@ -97,10 +113,10 @@ fun PracticeScreen(
                 uiState.isSessionComplete -> {
                     SessionSummary(
                         totalCards = uiState.totalCards,
-                        knownCount = uiState.knownCount,
-                        unknownCount = uiState.unknownCount,
-                        onRestart = { viewModel.resetSession() },
-                        onExit = onNavigateBack,
+                        knownCards = uiState.knownCount,
+                        unknownCards = uiState.unknownCount,
+                        onPracticeAgain = { viewModel.resetSession() },
+                        onFinish = onNavigateBack,
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }
@@ -148,7 +164,7 @@ fun PracticeScreen(
 
                         Spacer(modifier = Modifier.weight(1f))
 
-                        // Action buttons
+                        // Action buttons với liquid glass style
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.spacedBy(16.dp)
@@ -157,6 +173,11 @@ fun PracticeScreen(
                                 onClick = { viewModel.markAsUnknown() },
                                 colors = ButtonDefaults.buttonColors(
                                     containerColor = MaterialTheme.colorScheme.error
+                                ),
+                                shape = RoundedCornerShape(24.dp),
+                                elevation = ButtonDefaults.buttonElevation(
+                                    defaultElevation = 6.dp,
+                                    pressedElevation = 12.dp
                                 ),
                                 modifier = Modifier.weight(1f)
                             ) {
@@ -173,6 +194,11 @@ fun PracticeScreen(
                                 colors = ButtonDefaults.buttonColors(
                                     containerColor = Color(0xFF4CAF50)
                                 ),
+                                shape = RoundedCornerShape(24.dp),
+                                elevation = ButtonDefaults.buttonElevation(
+                                    defaultElevation = 6.dp,
+                                    pressedElevation = 12.dp
+                                ),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Icon(
@@ -187,86 +213,17 @@ fun PracticeScreen(
                 }
 
                 else -> {
-                    Text(
-                        text = "No cards to practice",
-                        modifier = Modifier.align(Alignment.Center),
-                        style = MaterialTheme.typography.bodyLarge
+                    // Session complete - show summary
+                    SessionSummary(
+                        totalCards = uiState.totalCards,
+                        knownCards = uiState.knownCount,
+                        unknownCards = uiState.unknownCount,
+                        onPracticeAgain = { viewModel.resetSession() },
+                        onFinish = onNavigateBack,
+                        modifier = Modifier.align(Alignment.Center)
                     )
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun SessionSummary(
-    totalCards: Int,
-    knownCount: Int,
-    unknownCount: Int,
-    onRestart: () -> Unit,
-    onExit: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Column(
-        modifier = modifier.padding(32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        Text(
-            text = "Session Complete!",
-            style = MaterialTheme.typography.headlineMedium
-        )
-
-        Text(
-            text = "Cards reviewed: $totalCards",
-            style = MaterialTheme.typography.bodyLarge
-        )
-
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(24.dp)
-        ) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(
-                    text = "$knownCount",
-                    style = MaterialTheme.typography.headlineSmall,
-                    color = Color(0xFF4CAF50)
-                )
-                Text(
-                    text = "Known",
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            }
-
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(
-                    text = "$unknownCount",
-                    style = MaterialTheme.typography.headlineSmall,
-                    color = MaterialTheme.colorScheme.error
-                )
-                Text(
-                    text = "Unknown",
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            }
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Button(
-            onClick = onRestart,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Practice Again")
-        }
-
-        Button(
-            onClick = onExit,
-            modifier = Modifier.fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.secondary
-            )
-        ) {
-            Text("Finish")
         }
     }
 }
