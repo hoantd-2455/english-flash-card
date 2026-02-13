@@ -1,0 +1,41 @@
+# Gradle files
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio
+.idea/
+*.iml
+.DS_Store
+local.properties
+
+# Kotlin
+*.class
+*.jar
+*.log
+*.kotlin_module
+*.kotlin_metadata
+
+# Build outputs
+out/
+bin/
+target/
+
+# Android
+*.apk
+*.ap_
+*.aab
+*.dex
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Environment files
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
